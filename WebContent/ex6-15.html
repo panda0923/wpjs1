@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*간단히 해볼수 있는 함수*/
+ function f(a,b,c){
+	console.log(a+b+c);
+}
+/*함수 객체 리터럴 생성*/
+var f = function(a,b){
+	console.log(a+b);
+	
+}
+f(10,20);
+/*생성자 함수를 사용해서 생성*/
+ var f2 = new Function("a","b","console.log(a+b);");
+ f2(10,20);
+</script>
+</head>
+<body>
+
+</body>
+</html>

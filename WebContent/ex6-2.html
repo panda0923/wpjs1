@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//JSON 표기법!!
+var employee1 = {
+   name: "홍길동",
+   title: "과장",
+   showInfo: function() {//함수 
+      document.write( "이름 : " + this.name );
+      document.write( "<br>" );
+      document.write( "직책 : " + this.title ); 
+   }
+} 
+employee1.showInfo();
+
+alert( employee1.name + " " + employee1.title );
+</script>
+</head>
+<body>
+
+</body>
+</html>

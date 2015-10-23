@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var changeText = function(el){
+	el.innerHTML = "Ooops!";
+}
+</script>
+</head>
+<body>
+<!--
+<h1 onclick="this.innerHTML='Ooops!';">Click on this text!</h1>
+-->
+<h1 onclick="console.log('click!');"
+	onmouseup="console.log('mouse up!');"
+	onmousedown="console.log('mouse down!');"
+	ondblclick = "console.log('mouse double click');"
+>Click on this text!</h1>
+
+</body>
+</html>

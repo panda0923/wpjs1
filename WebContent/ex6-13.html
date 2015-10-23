@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//escaped : 아스키문자가 아니라면 모두 유니코드형식으로 변환
+var escaped = escape("<h3>Here's a headline!</h3>");
+console.log( escaped );
+
+var url = "http://mysite.com/?stuff=\"안 대혁!&bar=";
+//encodedURL:기본적으로 escape()와 비슷한 동작을 하지만 주소표시에 쓰이는 특수문자들을 인코딩하지않는다.
+//즉 특수문자는 인코딩 x .보통은 파라미터를 전달하는 인터넷주소(url)전체를 인코딩할때 사용한다.
+var encodedURL = encodeURI(url);
+
+console.log(encodedURL);
+</script>
+</head>
+<body>
+
+</body>
+</html>

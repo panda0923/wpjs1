@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//배열 예제(주요 함수 예제)Array내장객체
+/*concat*/
+var hege = [ "Cecilie", "Lone" ];
+var stale = [ "Emil", "Tobias", "Linus" ];
+var children = hege.concat( stale );
+
+console.log( children ); 
+/*join*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+var energy = fruits.join(":");
+
+console.log( energy );
+/*push*/
+var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+
+fruits.push( "Kiwi" );
+
+console.log( fruits );
+console.log( fruits.pop() );
+console.log( fruits.pop() );//pop빼기
+console.log( fruits );
+/*reverse*/
+var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+fruits.reverse();
+console.log( fruits );
+
+/*shift*/
+var f = fruits.shift();
+consloe.log( f );
+consloe.log( fruits );
+/*slice 배열 쪼개기*/
+fruits.push("tomato");
+fruits.push("Pear");
+console.log(fruits);
+var citrus = fruits.slice(1, 4);
+console.log( citrus );
+/*sort*/
+console.log( fruits );
+fruits.sort();
+console.log( fruits );
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var Rentangle = function(x1,y1,x2,y2,bgcolor){
+	this.x1=x1;
+	this.y1=y1;
+	
+	this.x2=x2;
+	this.y2=y2;
+	
+	this.bgcolor=bgcolor;
+	
+}
+Rentangle.prototype.draw = function(){
+	var width=this.x2-this.x1;
+	var height = this.y2-this.y1;
+// 	document.write("[width:"+width+
+// 	                 ", height:"+height+
+// 	                 ", color:"+this.bgcolor+"]인 사각형을 그렸습니다..");
+	document.write(
+			"<div style='"+
+			"position:absolute;"+
+			"left:"+this.x1+"px;"+
+			"top:"+this.y1+"px;"+
+			"width:"+width+"px;"+
+			"height:"+height+"px;"+
+			"background-color:"+this.bgcolor+
+			"'>"+
+			"</div>");
+	
+}
+
+var rect3 = new Rentangle(320,320,400,400,"#fc6");
+rect3.draw();
+
+var a =[1,"hello",true,{name:"이송이",title:"학생"},function(){alert("hi");}];
+											//	->JSON사용(json객체생성)
+
+a[10]=20;
+console.log(a[3]);
+console.log(a[4]);
+console.log(a);
+console.log(a.length);
+a[4]();
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var number = 5//타입(var)는 넣어두되고 안넣어두된다.
+var anotherNumber = new Number(5)
+var pi = 3.14
+var string = "Hello, I'm a string!"
+var anotherString = new String( "Hello, I'm a string!" );
+var used = false; 
+
+var myVar=null;
+// number = "String";
+
+console.log( typeof number)
+console.log( typeof anotherNumber )
+console.log( typeof pi )
+console.log( typeof string )
+console.log( typeof anotherString )
+console.log( typeof used )
+
+console.error("에러");
+console.warn("경고");
+console.info("정보");
+
+if(myVar == null){
+console.log("MyVar는 null입니다.");
+}
+var v = "hello world";
+	
+function func(){
+	var	v="hello javascript";
+}
+/*이렇게 만들어도 된다.
+ * var func = funtion(){
+	
+}
+ */
+func();
+console.log(v);
+</script>
+</head>
+<body>
+<h1>Hello World</h1>
+</body>
+</html>

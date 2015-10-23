@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*함수 argument*/
+var myFuc = function(arg1,arg2,arg3){
+	console.log(arg1);
+	console.log(arg2.name+":"+arg2.title);
+	arg3();
+}
+// var person = {
+// 		name = "이송이",
+// 		title = "학생"
+// }
+// var f = function(){
+// // 	console.log("f가 호출 되었습니다.");
+// }
+myFuc("hello world",{name:"이송이",title:"학생"},
+		function (){console.log("f가 호출되었습니다.");});
+/*정의와 함께 호출할때*/
+(function(a,b){//정의
+	var sum = a+b;
+	console.log(sum);
+})// 함수 한번만 사용
+(10,20);//호출
+/* 동적 파라미터*/
+ var myFuc2 = function(){
+	 console.log(arguments[0]);
+		console.log(arguments[1].name+":"+arguments[1].title);
+		arguments[2]();
+}
+ myFuc2("hello world",{name:"이송이",title:"학생"},
+			function (){console.log("f가 호출되었습니다.");});
+
+//동적 파라미터 2번째방법
+ var myFuc2 = function(){
+	//2-1)여러개 사용
+	var sum = 0;
+	var count = arguments.length;
+	for(var 1=0; 1<count;i++){
+		sum += arguments[i];
+	}
+	//2-2)하나만
+	 var sum = arguments[0]+arguments[1]+arguments[2];
+	 console.log(sum)
+}
+ myFuc2(10,20,30,40,50);
+
+
+// function myFunction( ) {
+//   // 값
+//   alert("I have an argument! " + arguments[0] );
+	  
+//   // 객체
+//   alert(arguments[1].bar);
+	  
+//   // 함수 
+//   arguments[2]();
+// } 
+
+
+// var b = { bar: "baz" };
+
+// /*
+// var f = function(){ 
+// 	alert("Victory!");
+// } 
+// */
+
+// /*
+// myFunction( "foo", { bar: "baz"}, funtion(){ 
+// 	alert("Victory");
+// });
+// */
+
+
+// (function(){ 
+// 	alert("Victory");
+// })();
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

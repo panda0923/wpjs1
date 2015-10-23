@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="browser-detect.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*BrowserDetect 초기화*/
+ BrowserDetect.init();
+ 
+// var init= function(){
+// 	var btn = document.getElementById("btn");
+// 	btn.onclick = displayDate;
+// 	btn.onmouseover = displayDate;
+// 	btn.onmouseout = hideDate;
+
+// }
+// var displayDate = function(){
+// 	var today = new Date();//요거를 <p>에 넣기
+// 	var p = document.getElementById("demo");
+// 	p.innerHTML = "오늘은"+today;
+
+// }
+// var hideDate = function(){
+// 	var p1=document.getElementById("demo");
+// 	p1.innerHTML = "";
+// }
+var init= function(){
+	
+	/*쿠키 사용 여부 체크*/
+  		if( navigator.cookieEnabled==true ){
+    console.log("쿠키를 사용할 수 있습니다.")
+  } else {
+	  console.log("쿠키를 사용할 수 없습니다.")
+  }
+
+	/*버튼 이벤트헨들러*/
+	var btn = document.getElementById("btn");
+	btn.onclick = function(){
+		var p = document.getElementById("demo");
+		var today = new Date();
+		p.innerHTML = "오늘은"+today;
+		};
+	btn.onmouseover = function(){
+		var p = document.getElementById("demo");
+		var today = new Date();
+		p.innerHTML = "오늘은"+today;
+		};
+	btn.onmouseout = function(){
+		var p=document.getElementById("demo");
+	 	p.innerHTML = "";
+		}
+	}
+	console.log(BrowserDetect.browser+":"
+			+BrowserDetect.version+":"
+			+BrowserDetect.os);
+
+</script>
+
+</head>
+
+<!-- <body onload="init()" onunload="onUnload()"> -->
+<body onload="init()">
+<p>버튼을 클릭하면  <em>displayDate()</em> 함수가 실행 됩니다.</p>
+<!-- <button onclick="displayDate();"id="btn">Try it</button> -->
+<button id="btn">Try it</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
